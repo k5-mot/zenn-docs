@@ -1,0 +1,21 @@
+title: "AWSの備忘録"
+summary: "AWS備忘録"
+topics: ["aws", "web", "cdn", "ec2", "rds"] # Up to 5 topics
+published: false # If false, draft
+price: 0 # If not free, Specify 200-5000 yen
+chapters:
+  - 0-abstract
+  - 1-ec2
+  - 2-vpc
+  - 3-rds
+  - 4-asm
+  - 5-elb
+  - 6-route53
+  - 7-acm
+  - 8-s3
+  - 9-cloudfront
+  - 10-cloudwatch
+  - 11-ec2-auto-scaling
+  - 12-iam
+  - 13-ssm
+  - 14-alllast

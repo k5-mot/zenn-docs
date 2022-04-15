@@ -1,0 +1,14 @@
+title: "Docker & Kubernetes備忘録"
+summary: "DockerとKubernetesの練習用環境をVMware Workstation Player上のCentOS7仮想マシンに構築し、使い方を学ぶ"
+topics: ["docker", "kubernetes", "vscode"] # Up to 5 topics
+published: false # If false, draft
+price: 0 # If not free, Specify 200-5000 yen
+chapters:
+  - 0-setup
+  - 0-setup-wsl
+  - 1-minikube
+  - 2-docker
+  - 3-kubernetes
+  - 4-kubernetes-resources
+  - 5-create-webapp
+  
