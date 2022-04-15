@@ -1,5 +1,5 @@
 ---
-title: "a"
+title: "Sample1"
 ---
 
-# A
+# Sample

@@ -1,11 +1,11 @@
 ---
-title: "ABCXC"
+title: "Sample Article"
 emoji: "🙆"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: []
 published: false
 ---
 
-# ABC
+# Sample Article
 
-## ABC
+## Sample Sub Article
