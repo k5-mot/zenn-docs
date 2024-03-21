@@ -1,0 +1,7 @@
+title: "ML & AI & データ分析 備忘録"
+summary: "A"
+topics: ["ml", "ai", "data-analysis"] # Up to 5 topics
+published: false # If false, draft
+price: 0 # If not free, Specify 200-5000 yen
+chapters:
+  - 0-setup

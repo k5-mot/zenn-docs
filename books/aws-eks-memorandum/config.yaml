@@ -1,8 +1,8 @@
-title: "Sample Book"
+title: "Amazon EKS備忘録"
 summary: "Sample"
 topics: [] # Up to 5 topics
 published: false # If false, draft
 price: 0 # If not free, Specify 200-5000 yen
 chapters:
-  - example1
-  - example2
+  - 1-setup
+  - 2-handon
