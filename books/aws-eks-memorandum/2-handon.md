@@ -10,7 +10,7 @@ title: "Kubernetes"
 - デプロイするには、Kubernetes用のYAMLファイルを作成する
 
 ```bash
-eksctl create cluster -f cluster.yaml
+eksctl create cluster -f cluster_v1.yaml
 kubectl run nginx --image nginx:latest -o yaml --dry-run > nginx_v1.yaml
 kubectl apply -f nginx_v1.yaml
 kubectl get pods
@@ -34,9 +34,11 @@ curl 127.0.0.1:8080
 ```bash
 kubectl create service nodeport nginx --tcp=80:80 --dry-run -o yaml
 kubectl apply -f nginx_v2.yaml
-kubectl get svc
-kubectl get pod -o wide # IPとポートを確認
-# EC2 SGで30000-32000ポートのどれかを開ける
+kubectl get svc # ポートを確認
+kubectl get pod -o wide
+# Security Groupで確認したポートを開ける
+# EC2のPublic IPを確認
+# ブラウザで、http://<Public IP>:<Port>を開く
 ```
 
 - ec2 sg設定
