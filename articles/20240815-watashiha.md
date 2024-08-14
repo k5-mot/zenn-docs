@@ -3,7 +3,7 @@ title: "大喜利特化LLM「watashiha-gpt-6b」を触ってみる..."
 emoji: "🙆"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: []
-published: false
+published: true
 ---
 
 # 概要
@@ -43,13 +43,13 @@ TEMPLATE """お題:{{ .Prompt }}<SEP> 回答:{{ .Response }}<EOD>"""
 wget -P . https://huggingface.co/mmnga/watashiha-gpt-6b-gguf/resolve/main/watashiha-gpt-6b-q4_K_M.gguf
 ```
 
-## 3. ollamaで`watashiha`を起動する
+## 3. ollamaで`watashiha`モデルを作成
 
 ```bash
 ollama create watashiha:6b -f ./Modelfile
 ```
 
-## 4. `watashiha`を試してみる
+## 4. `watashiha`を起動する
 
 ```bash
 ollama run watashiha:6b
