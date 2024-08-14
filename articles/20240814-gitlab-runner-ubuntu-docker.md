@@ -52,12 +52,12 @@ GitLabとGitLab-Runnerをdocker-composeで起動した後、GitLabの全リポ�
 4. Instance Runnerの設定をし、"Create runner"
    1. Platform: `Linux`
    2. Tags:
-      1. Tags: `ubuntu`
+      1. Tags: `linux, alpine`
       2. Run untagged jobs: `✅ (チェックする)`
-         1. Tagを付けないCI/CDがすべてubuntuで実行される
-         2. Tagで、Linux/macos/WindowsのRunnerを振り分ける
+         1. Tagを付けないCI/CDがすべて、このRunnerで実行される
+         2. Tagで、Linux/macos/WindowsのRunnerを振り分けるのがよい
    3. Configuration
-      1. Runner description: `ubuntu-latest`
+      1. Runner description: `alpine-latest`
 5.  runner authentication token (例: `glrt-XXXXXXXXXXXXXXXXXXXX`)を手元に控える
 
 - 参考資料
@@ -69,7 +69,7 @@ GitLabとGitLab-Runnerをdocker-composeで起動した後、GitLabの全リポ�
 
 1. トークンを控えたものに置き換え、以下のコマンドを入力する
 ```bash
-sudo docker exec -it homelab-gitlab-runner \
+sudo docker exec -it gitlab-runner \
 gitlab-runner register \
   --non-interactive \
   --url "http://192.168.11.2/gitlab" \
@@ -80,12 +80,12 @@ gitlab-runner register \
 ```
 2. Runnerの並行実行ジョブ数を`1`から`8`に変更する
 ```bash
-sudo docker exec -it homelab-gitlab-runner /bin/bash -c "sed -i 's/concurrent.*/concurrent = 8/' /etc/gitlab-runner/config.toml"
-sudo docker exec -it homelab-gitlab-runner /bin/bash -c "cat /etc/gitlab-runner/config.toml"
+sudo docker exec -it gitlab-runner /bin/bash -c "sed -i 's/concurrent.*/concurrent = 8/' /etc/gitlab-runner/config.toml"
+sudo docker exec -it gitlab-runner /bin/bash -c "cat /etc/gitlab-runner/config.toml"
 ```
 3. GitLab Runnerを再起動する
 ```bash
-sudo docker restart homelab-gitlab-runner
+sudo docker restart gitlab-runner
 ```
 
 - 参考資料
