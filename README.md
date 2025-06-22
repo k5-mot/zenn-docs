@@ -1,6 +1,3 @@
-# Articles for Zenn
+# Zenn CLI
 
-## References
-
-[Zenn.dev](https://zenn.dev/k5_mot)
-
+* [📘 How to use](https://zenn.dev/zenn/articles/zenn-cli-guide)
