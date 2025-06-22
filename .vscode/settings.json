@@ -1,0 +1,5 @@
+{
+  "aws.telemetry": false,
+  "chat.agent.enabled": true,
+  "chat.tools.autoApprove": true
+}

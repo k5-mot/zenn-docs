@@ -1,0 +1,16 @@
+{
+    "id": "npm",
+    "version": "1.0.0",
+    "name": "npm",
+    "description": "Installs the provided version of Node.js, as well as NPM and other common Node.js utilities.",
+    "options": {
+        "toolsToInstall": {
+            "type": "string",
+            "default": "git-cz,npm-check-updates,@anthropic-ai/claude-code,@openai/codex",
+            "description": "Comma-separated list of tools to install when 'installTools' is true. Defaults to a set of common Node.js tools."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/node"
+    ]
+}

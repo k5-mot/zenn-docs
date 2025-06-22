@@ -1,0 +1,55 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+    "name": "dev",
+    "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+    "runArgs": [
+        "--env-file",
+        "./.devcontainer/devcontainer.env",
+        "--name",
+        "zenn-dev",
+        "--rm"
+    ],
+    "features": {
+        "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+            "packages": "curl,ca-certificates,gnupg,vim,jq,poppler-utils",
+            "upgradePackages": true
+        },
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true
+        },
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/rocker-org/devcontainer-features/pandoc:1": {},
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "22.16.0"
+        },
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.12"
+        },
+        "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {
+            "version": "latest"
+        },
+        "./features/npm": {
+            "toolsToInstall": "git-cz,npm-check-updates,zenn-cli,markdownlint-cli2,textlint,@anthropic-ai/claude-code"
+        }
+    },
+    "containerUser": "vscode",
+    "postCreateCommand": "bash ./.devcontainer/postCreate.sh",
+    "postStartCommand": "bash ./.devcontainer/postStart.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "3w36zj6.textlint", // Linter for Natural Language
+                "DavidAnson.vscode-markdownlint", // Linter for Markdown
+                "hediet.vscode-drawio", // Draw.IO Integration
+                "bierner.markdown-mermaid", // Mermaid support in Markdown
+                "bierner.markdown-emoji", // Emoji support in Markdown
+                "bierner.markdown-preview-github-styles", // GitHub styles in Markdown
+                "mhutchie.git-graph" // Git support
+            ]
+        },
+        "settings": {}
+    }
+}

@@ -37,6 +37,10 @@ sudo apt-get autoremove -y
 sudo apt-get clean
 ```
 
+```bash
+ ln -s /mnt/c/Users/merry/.aws/ ~/.aws
+```
+
 ## Docker をインストールする.
 
 - 参考資料
